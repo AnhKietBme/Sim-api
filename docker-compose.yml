@@ -1,0 +1,14 @@
+version: '2'
+services:
+  dgft-api:
+    container_name: dgft-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /usr/src/myapp/
+    volumes:
+      - ./app:/usr/src/myapp
+      - /usr/src/myapp/vendor
+    command: sh -c "composer update && composer install && php -S 0.0.0.0:8080"
+    ports:
+      - "8080:8080"

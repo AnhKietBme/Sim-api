@@ -1,0 +1,16 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./local-packages/veritrans-tgmdk",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+    "require": {
+        "php": "~7.4|~8.0",
+        "veritrans/tgmdk": "^1.1.8",
+        "ext-json": "*"
+      }
+}
